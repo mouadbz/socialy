@@ -4,6 +4,24 @@ import React from "react";
 type Props = {};
 
 function FeaturesSection({}: Props) {
+  const numbersList = [
+    {
+      number: "542 M",
+      text: "FOLLOWERS",
+    },
+    {
+      number: "54 K",
+      text: "ACCOUNTS TRANSFORMED",
+    },
+    {
+      number: "243 K",
+      text: "VIDEOS PROMOTED",
+    },
+    {
+      number: "542 M",
+      text: "FOLLOWERS",
+    },
+  ];
   return (
     <div className="md:mb-20 md:pt-25 pt-14 px-4 md:px-0 relative mx-auto font-Inter mt-36">
       <Image
@@ -11,16 +29,16 @@ function FeaturesSection({}: Props) {
         src="/images/instagram-left.png"
         width={253}
         height={549}
-        className="absolute hidden md:block left-0 top-0"
+        className="absolute hidden md:block left-0 top-0 z-0 md:-left-20 lg:left-0"
       />
       <Image
         alt=""
         src="/images/instagram-right.png"
         width={253}
         height={549}
-        className="absolute right-0 top-0 hidden md:block"
+        className="absolute right-0 top-0 hidden md:block z-0 md:-right-20 lg:right-0"
       />
-      <div className="mx-auto md:w-3/5">
+      <div className="mx-auto md:w-3/5 z-10 relative">
         <h2 className="text-center text-3xl font-bold text-gray-900 dark:text-white md:text-4xl lg:text-5xl">
           We help your <span className="text-primary">Instagram Explode</span>
         </h2>
@@ -65,28 +83,13 @@ function FeaturesSection({}: Props) {
         </div>
       </div>
 
-      <div className="max-w-[769px] mx-auto md:gap-14 gap-y-20 flex flex-wrap md:grid grid-cols-2 md:grid-cols-4 md:mt-11 mt-4">
-        <div className="text-center md:w-auto w-1/2 order-2">
-          <p className="font-bold text-5xl pb-2.5">54K</p>
-          <p className="text-xl text-[#5F5F65] ">Accounts Transformed</p>
-        </div>
-        <div className="text-center md:w-auto w-1/2 order-3">
-          <p className="font-bold text-5xl pb-2.5">243K</p>
-          <p className="text-xl text-[#5F5F65] ">VIDEOS</p>
-          <p className="text-xl text-[#5F5F65] whitespace-nowrap">PROMOTED</p>
-        </div>
-        <div className="text-center md:w-auto w-1/2 order-4">
-          <p className="font-bold text-5xl pb-2.5">178M</p>
-          <p className="text-xl text-[#5F5F65] ">LIKES</p>
-          <p className="text-xl text-[#5F5F65] whitespace-nowrap">RECEIVED</p>
-        </div>
-        <div className="text-center md:w-auto w-1/2 order-1">
-          <p className="font-bold text-5xl pb-2.5">542M</p>
-          <p className="text-xl text-[#5F5F65] ">FOLLOWERS</p>
-          <p className="text-xl text-[#5F5F65] whitespace-nowrap">
-            AND COUNTING
-          </p>
-        </div>
+      <div className="max-w-[769px] mx-auto md:gap-14 gap-y-20 flex flex-wrap md:grid grid-cols-2 md:grid-cols-4 md:mt-11 mt-4 md:w-4/5">
+        {numbersList.map(({ number, text }, key) => (
+          <div className="text-center md:w-auto w-1/2 order-2" key={key}>
+            <p className="font-bold text-4xl pb-2.5">{number}</p>
+            <p className="text-[#5F5F65] text-xl">{text}</p>
+          </div>
+        ))}
       </div>
     </div>
   );

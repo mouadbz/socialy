@@ -57,7 +57,7 @@ function Header({}: Props) {
             /> */}
             <div
               id="navlinks"
-              className="invisible absolute top-full left-0 z-20 w-full origin-top-right translate-y-1 scale-90 flex-col flex-wrap justify-end gap-6 rounded-3xl border border-gray-100 bg-white p-8 opacity-0 shadow-2xl shadow-gray-600/10 transition-all duration-300 dark:border-gray-700 dark:bg-gray-800 dark:shadow-none lg:visible lg:relative lg:flex lg:w-7/12 lg:translate-y-0 lg:scale-100 lg:flex-row lg:items-center lg:gap-0 lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 lg:shadow-none astro-ESKEKC2M !lg:translate-y-0"
+              className="invisible absolute top-full left-0 z-20 w-full origin-top-right translate-y-1 scale-90 flex-col flex-wrap justify-end gap-6 rounded-3xl border border-gray-100 bg-white p-8 opacity-0 shadow-2xl shadow-gray-600/10 transition-all duration-300 dark:border-gray-700 dark:shadow-none lg:visible lg:relative lg:flex lg:w-7/12 lg:translate-y-0 lg:scale-100 lg:flex-row lg:items-center lg:gap-0 lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 lg:shadow-none astro-ESKEKC2M !lg:translate-y-0"
             >
               <div className="w-full text-gray-600 dark:text-gray-200 lg:w-auto lg:pr-4 lg:pt-0 astro-ESKEKC2M">
                 <ul className="flex flex-col gap-6 tracking-wide lg:flex-row lg:gap-0 lg:text-sm astro-ESKEKC2M">
@@ -67,17 +67,17 @@ function Header({}: Props) {
                         href={route}
                         className="flex items-center hover:text-primary transition dark:hover:text-white md:px-3 astro-ESKEKC2M"
                       >
-                        <Icon className="h-5 me-1" />
+                        <Icon className="h-5 me-1dark:fill-gray-200" />
                         <span className="astro-ESKEKC2M">{label}</span>
                       </Link>
                     </li>
                   ))}
                 </ul>
               </div>
-              <div className="mt-12 lg:mt-0 astro-ESKEKC2M lg:border-l border-primary/25 lg:pl-6">
+              <div className="mt-12 me-4 lg:mt-0 astro-ESKEKC2M lg:border-l border-primary/25 lg:pl-6">
                 <CustomLink text="Get Started" href="/" />
               </div>
-              {/* <ThemeSwitcher /> */}
+              <ThemeSwitcher />
             </div>
           </div>
         </div>

@@ -13,7 +13,7 @@ const Hero = (props: Props) => {
   const [cuurentPlatform, setcuurentPlatform] =
     useState<PlatformType>("instagram");
   return (
-    <section className="lg:px-0 px-5 relative bg-bottom">
+    <section className="lg:px-0 px-5 relative bg-bottom dark:bg-[#090e1a]">
       <div className="text-center pt-28 pb-11 md:pb-25 max-w-[982px] w-full rounded-2xl mx-auto md:px-0 px-5">
         <h1 className="md:text-[50px] text-8 tracking-tight text-violet-blackcurrant md:mb-5 mb-2 font-bold">
           Watch your content go viral, fast!

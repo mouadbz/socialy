@@ -1,0 +1,6 @@
+- add cta in mobile
+
+
+- restyle testimonials section with animation
+- add second cta
+- add 'how it works section'

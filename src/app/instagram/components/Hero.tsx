@@ -2,6 +2,7 @@ import InstagramIcon from "@/components/shared/icons/InstagramIcon";
 import Image from "next/image";
 import React from "react";
 import ClientSection from "./ClientSection";
+import AnimatedTitle from "./AnimatedTitle";
 
 type Props = {};
 
@@ -22,11 +23,16 @@ function Hero({}: Props) {
       </div>
       <div className="mx-auto max-w-6xl px-6 md:px-12 lg:px-6 xl:px-0">
         <div className="relative ml-auto pt-40 xl:pt-36">
-          <div className="gap-12 md:flex md:items-center">
-            <div className="text-center sm:px-12 md:w-2/3 md:px-0 md:text-left lg:w-1/2">
-              <h1 className="text-5xl text-primary font-black dark:text-white md:text-6xl xl:text-7xl">
-                Business management made easy
+          <div className=" md:flex md:items-center">
+            <div className="text-center sm:px-12 md:px-0 md:text-left w-full md:w-3/5">
+              <h1 className="text-5xl font-black dark:text-white md:text-6xl xl:text-7xl text-center md:text-left">
+                I want more Instagram{" "}
+                <AnimatedTitle
+                  className="text-primary flex justify-center md:justify-start"
+                  textList={["Likes", "Comments", "Followers"]}
+                />
               </h1>
+
               <div>
                 <p className="mt-8 text-lg text-gray-700 dark:text-gray-100">
                   Odio incidunt nam sit illum. Voluptas doloribus asperiores
@@ -48,9 +54,9 @@ function Hero({}: Props) {
                       <button
                         type="submit"
                         title="Start buying"
-                        className="relative ml-auto h-12 w-12 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 active:duration-75 active:before:scale-95 dark:before:bg-primaryLight sm:w-auto sm:px-6"
+                        className="relative ml-auto h-12 w-12 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 active:duration-75 active:before:scale-95 sm:w-auto sm:px-6"
                       >
-                        <span className="relative hidden w-max font-semibold text-white dark:text-gray-900 md:block">
+                        <span className="relative hidden w-max font-semibold text-white md:block">
                           {" "}
                           Get Started{" "}
                         </span>
@@ -130,21 +136,14 @@ function Hero({}: Props) {
                   </div> */}
               </div>
             </div>
-            <div className="relative mt-20 md:mt-0 md:w-2/5 lg:w-3/5">
-              <div className="-ml-6 md:-mr-72 lg:mr-0">
+            <div className="absolute hidden lg:block -right-16">
+              <div className="mr-0">
                 <Image
-                  className="h-full object-cover object-left dark:hidden"
-                  src="/images/hero.webp"
+                  className="h-full object-cover object-left"
+                  src="/images/thumb-banner-instagram.png"
                   alt="app screenshot"
-                  width={1628}
-                  height={1233}
-                />
-                <Image
-                  className="hidden h-full object-cover object-left dark:block"
-                  src="/images/hero-dark.webp"
-                  alt="app screenshot"
-                  width={1628}
-                  height={1233}
+                  width={450}
+                  height={450}
                 />
               </div>
             </div>
